@@ -5,4 +5,24 @@
 # Testing  - trying to use ssh, by addng following as remote: arnie2
 # git@github.com:arnielarson/ExData_Plotting1.git
 #
+# Loading the data - 2E10^6 data points..  9 fields, 7 as numeric (8 bytes), 2 as char (more..)
+# is about 2E10^8 bytes - given 10^6 bytes/MB - that's about 200 MB of RAM..  
+# given that my laptop is old and crappy.. I've truncated the data on loading, just the first
+# 100000 rows gets the data of interest.
 #
+# Making the graphs - I've decided to 1. make the axis and titles the same format
+# e.g capitalization and spaces, slight discrepency from what's on the assignment page
+#
+# Printing to file - I've decided to use the file device png(<fname>) as that uses a 
+# white background by default - which is what I'd prefer for this scenario
+# e.g. simply generating plot files in png format
+#
+# Plot files - I created the 4 R files as directed. 
+# I put the loading code in plot1.R, creating a dependency on that file the
+# other plotting code files.  The loading code iteself has the file location and subsetting 
+# logic hardcoded.  
+# I'd have preferred to separate loading and logic code out into it's own file.
+#
+# Each of the plotting files has a function to create a specific plot. plot4.R
+# depends on each of the previous plot functions to create it's plot.
+
