@@ -24,7 +24,7 @@ run <- function() {
 # Overlay 3 independent sets of data onto a single plot, with a legend
 plot3 <- function(ss, bty="o") {
     plot(strptime(paste(ss$Date,ss$Time),"%d/%m/%Y %H:%M:%S"),ss$Sub_metering_1,
-            type="l", xlab="",ylab="Energy sub metering")
+            type="l", xlab="",ylab="Energy Sub Metering")
     lines(strptime(paste(ss$Date,ss$Time),"%d/%m/%Y %H:%M:%S"),ss$Sub_metering_2,
             col="red")
     lines(strptime(paste(ss$Date,ss$Time),"%d/%m/%Y %H:%M:%S"),ss$Sub_metering_3,

@@ -23,9 +23,9 @@ run <- function() {
 
 
 
-plot2 <- function(ss) {
+plot2 <- function(ss, ylab="Global Active Power (kilowatts)") {
     # plot a time series plot - convert Dates and Times, plot vs. variable
     plot(strptime(paste(ss$Date,ss$Time),"%d/%m/%Y %H:%M:%S"),ss$Global_active_power,
-            type="l", xlab="",ylab="Global Active Submetering (kilowatts)")
+            type="l", xlab="",ylab=ylab)
 }
 

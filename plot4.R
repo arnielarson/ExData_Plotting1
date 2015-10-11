@@ -26,8 +26,9 @@ run <- function() {
 plot4 <- function(ss) {
 
     par(mfrow=c(2,2))
-    plot1(ss)
-    plot2(ss)
+    plot2(ss, "Global Active Power")
+    plot(strptime(paste(ss$Date,ss$Time),"%d/%m/%Y %H:%M:%S"),ss$Voltage,
+            type="l", xlab="",ylab="Voltage")
     plot3(ss, "n")
     plot(strptime(paste(ss$Date,ss$Time),"%d/%m/%Y %H:%M:%S"),ss$Global_reactive_power,
             type="l", xlab="",ylab="Global Reactive Power")

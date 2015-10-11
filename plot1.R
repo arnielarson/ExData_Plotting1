@@ -16,13 +16,13 @@ run <- function() {
     png("plot1.png")
     d<-load()
     ss<-selectSubset(d)
-    plot1(ss)
+    plot1(ss, xlab="Global Active Power (kilowatts)")
     dev.off()
 }
 
 
-plot1 <- function(ss, column="Global_active_power") {
-    hist(ss[,column], xlab="Global Active Power (kilowatts)", main="Global Active Power", col="red")
+plot1 <- function(ss, column="Global_active_power", xlab="Global Active Power") {
+    hist(ss[,column], xlab=xlab, main="Global Active Power", col="red")
 }
 
 
